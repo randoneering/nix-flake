@@ -143,6 +143,7 @@
     ripgrep
     flatpak
     slack
+    super-productivity
   ];
 
   programs.gnupg.agent = {
