@@ -6,17 +6,14 @@
     nixpkgs-previous.url ="github:nixos/nixpkgs/nixos-24.11";
     unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware";
-    # home-manager = {
-    #   url = "github:nix-community/home-manager/release-24.11";
-    #   inputs.nixpkgs.follows = "github:nixos/nixpkgs/nixos-24.11";
-    # };
-  };
+    home-manager = {
+      url = "github:nix-community/home-manager/release-25.05";  };
 
   outputs = {
     self,
     nixpkgs,
     nixpkgs-previous,
-    # home-manager,
+     home-manager,
     ...
   } @ inputs: let
     unstable = import inputs.unstable-nixpkgs {
@@ -29,9 +26,14 @@
         system = "x86-64_linux";
         modules = [
           ./hosts/lattitude/configuration.nix
-          ./hosts/lattitude/hardware-configuration.nix
           {
             networking.hostName = "nix-lattitude";
+          }
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.randoneering = import ./home.nix;
           }
         ];
       };
@@ -41,7 +43,6 @@
         modules = [
 
           ./hosts/lemur/configuration.nix
-          ./hosts/lemur/hardware-configuration.nix
           {
             networking.hostName = "nix-lemur";
           }
@@ -52,7 +53,6 @@
         system = "x86-64_linux";
         modules = [
           ./hosts/nix-db/configuration.nix
-          ./hosts/nix-db/hardware-configuration.nix
           {
             networking.hostName = "nix-db";
           }
