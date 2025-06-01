@@ -144,6 +144,8 @@
     flatpak
     slack
     super-productivity
+    syft
+    grype
   ];
 
   programs.gnupg.agent = {
