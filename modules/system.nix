@@ -12,6 +12,8 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
+  home-manager.backupFileExtension = "backup";
+
   nix.settings.trusted-users = [username];
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
@@ -96,5 +98,5 @@
     pulse.enable = true;
   };
 
-  };
+
 }

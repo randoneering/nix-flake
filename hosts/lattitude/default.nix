@@ -17,7 +17,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostname = "nix-lattitude"
+  networking.hostName = "nix-lattitude";
 
   # Enable NFS
   services.rpcbind.enable = true; # needed for NFS

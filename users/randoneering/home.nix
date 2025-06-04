@@ -2,8 +2,8 @@
 
   imports = [
     ../../home/core.nix
-    ./programs
-    ./shell
+    ../../home/programs
+    ../../home/shell
   ];
 
   programs.git = {

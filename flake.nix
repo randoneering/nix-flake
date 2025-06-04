@@ -18,15 +18,15 @@
   }: {
     nixosConfigurations = {
       nix-lattitude = let
-        username = "randoneering"
+        username = "randoneering";
         specialArgs = {inherit username;};
         in
             nixpkgs.lib.nixosSystem {
-              inherit specialArgs
+              inherit specialArgs;
               system = "x86_64-linux";
 
               modules = [
-                ./hosts/lattitude/configuration.nix
+                ./hosts/lattitude/default.nix
                 ./users/${username}/nixos.nix
                 home-manager.nixosModules.home-manager
                 {
@@ -46,7 +46,7 @@
         ];
       };
 
-      db03 = nixpkgs-previous.lib.nixosSystem {
+      db03 = nixpkgs.lib.nixosSystem {
         system = "x86-64_linux";
         modules = [
           ./hosts/nix-db/configuration.nix
