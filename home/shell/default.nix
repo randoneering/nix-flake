@@ -1,6 +1,5 @@
 {config, ...}:
 #let
-
 #in
 {
   imports = [
@@ -8,5 +7,4 @@
     ./starship.nix
     ./terminals.nix
   ];
-
 }

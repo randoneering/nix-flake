@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-
   services.displayManager = {
     sddm.enableHidpi = true;
   };
@@ -32,5 +31,4 @@
     pkgs.tali # poker game
     pkgs.totem # video player
   ];
-
 }

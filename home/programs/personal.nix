@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     # Static Site
     hugo
@@ -16,6 +13,5 @@
     atuin # will want to set this up in shell soon
     # Office
     onlyoffice-desktopeditors
-
   ];
 }

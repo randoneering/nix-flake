@@ -18,12 +18,10 @@
     "/boot/crypto_keyfile.bin" = null;
   };
 
-
   boot.loader.grub.enableCryptodisk = true;
 
   boot.initrd.luks.devices."luks-97a1aab4-bb60-4084-9763-4be78b197c12".keyFile = "/boot/crypto_keyfile.bin";
   boot.initrd.luks.devices."luks-ef0e7846-eabf-409e-96e3-7fc71a5c8542".keyFile = "/boot/crypto_keyfile.bin";
-
 
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -89,19 +87,19 @@
   services.flatpak.enable = true;
 
   environment.systemPackages = with pkgs; [
-        curl
-        wget
-        atuin
-        htop
-        fish
-        fastfetch
-        alejandra
-        flatpak
+    curl
+    wget
+    atuin
+    htop
+    fish
+    fastfetch
+    alejandra
+    flatpak
   ];
 
   config.services.postgresql = {
     enable = true;
-    ensureDatabases = [ "pgfirstaid" ];
+    ensureDatabases = ["pgfirstaid"];
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser   ADDRESS   auth-method
       local all       all      127.0.0.1/32          scram-sha-256
@@ -117,11 +115,10 @@
   # Enable ssh-agent
   services.openssh.enable = true;
 
-
   environment.sessionVariables = {
-      EDITOR = "nano";
-      TERMINAL = "kitty";
-      };
+    EDITOR = "nano";
+    TERMINAL = "kitty";
+  };
 
   system.stateVersion = "24.11";
 }

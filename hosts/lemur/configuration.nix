@@ -66,7 +66,7 @@
   };
 
   # Enable NFS
-  boot.supportedFilesystems = [ "nfs" ];
+  boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS
   fileSystems."/mnt/jellyfin" = {
     device = "nas.randoneering.cloud:/mnt/randoneering_prod/Jellyfin";
@@ -159,10 +159,9 @@
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
-
   environment.sessionVariables = {
-  EDITOR = "nano";
-  TERMINAL = "kitty";
+    EDITOR = "nano";
+    TERMINAL = "kitty";
   };
 
   system.stateVersion = "25.05";

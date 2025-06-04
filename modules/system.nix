@@ -4,8 +4,6 @@
   username,
   ...
 }: {
-
-
   users.users.${username} = {
     isNormalUser = true;
     description = username;
@@ -32,7 +30,6 @@
   #
   nixpkgs.config.permittedInsecurePackages = ["electron-27.3.11"];
 
-
   # Set your time zone.
   time.timeZone = "America/Boise";
 
@@ -54,7 +51,6 @@
 
   fonts = {
     packages = with pkgs; [
-
       # nerdfonts
       nerd-fonts.symbols-only # symbols icon only
       nerd-fonts.fira-code
@@ -97,6 +93,4 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-
 }

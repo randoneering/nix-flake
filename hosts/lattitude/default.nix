@@ -32,6 +32,5 @@
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
 
-
   system.stateVersion = "25.05";
 }
