@@ -1,9 +1,6 @@
-{pkgs, ...}: let
-  font = "Fira Code Nerd Font";
-in {
+{pkgs, ...}:
   programs.kitty = {
     enable = true;
     settings = {
     };
-  };
 }
