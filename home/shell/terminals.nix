@@ -1,6 +1,8 @@
-{pkgs, ...}:
-  programs.kitty = {
+{pkgs, ...}:{
+
+programs.kitty = {
     enable = true;
     settings = {
     };
+};
 }
