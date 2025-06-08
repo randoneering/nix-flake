@@ -6,19 +6,18 @@
 }: {
   imports = [
     ../../modules/system.nix
-    ../../modules/desktop/gnome.nix
-    # Include the results of the hardware scan.
+    ../../modules/gnome.nix
+
     ./hardware-configuration.nix
   ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  # Enable Bluetooth
-  hardware.bluetooth.enable = true;
+
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nix-lattitude";
+  networking.hostName = "nix-lemur";
+
 
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
@@ -33,6 +32,17 @@
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
+
+  # Flatpak just in case
+  services.flatpak.enable = true;
+
+  # Enable Bluetooth
+  hardware.bluetooth.enable = true;
+
+  # environment.sessionVariables = {
+  #   EDITOR = "nano";
+  #   TERMINAL = "kitty";
+  # };
 
   system.stateVersion = "25.05";
 }

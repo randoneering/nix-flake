@@ -7,11 +7,15 @@
     btop
     flameshot
     remmina
+    ripgrep
+    nfs-utils
+    git
+    wget
+
 
     # productivity
     joplin-desktop
     super-productivity
-    slack
 
     # IDE/Database Manager
     zed-editor

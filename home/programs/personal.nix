@@ -3,15 +3,30 @@
     # Static Site
     hugo
 
+    # Python
+    python3
+    python312Packages.pip
+
+    # Desktop Customization
+    gnome-tweaks
+    gnome-extension-manager
+
     # Social
     element-desktop
     discord
+    slack
     signal-desktop
 
     # Utility
     nfs-utils
-    atuin # will want to set this up in shell soon
+    fastfetch
+
     # Office
     onlyoffice-desktopeditors
+
+    # Flatpak Related
+    flatpak
+
+
   ];
 }

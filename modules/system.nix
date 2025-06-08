@@ -81,8 +81,12 @@
     wget
     curl
     git
-    fastfetch
   ];
+
+  environment.sessionVariables = {
+    EDITOR = "nano";
+    TERMINAL = "kitty";
+  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
