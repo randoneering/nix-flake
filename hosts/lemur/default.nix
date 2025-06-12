@@ -6,8 +6,8 @@
 }: {
   imports = [
     ../../modules/system.nix
-    ../../modules/gnome.nix
-
+    ../../modules/desktop/gnome.nix
+    ../../modules/networking
     ./hardware-configuration.nix
   ];
   # Bootloader.
