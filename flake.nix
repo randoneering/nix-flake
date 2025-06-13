@@ -38,7 +38,12 @@
           ];
         };
 
-      nix-lemur = nixpkgs.lib.nixosSystem {
+      nix-lemur =
+      let
+        username = "randoneering";
+        specialArgs = {inherit username;};
+      in nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
         system = "x86-64_linux";
         modules = [
           ./hosts/lemur/default.nix

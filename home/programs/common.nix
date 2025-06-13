@@ -11,6 +11,7 @@
     nfs-utils
     git
     wget
+    popsicle
 
 
     # productivity
