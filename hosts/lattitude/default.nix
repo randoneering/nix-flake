@@ -8,6 +8,7 @@
     ../../modules/system.nix
     ../../modules/desktop/gnome.nix
     ../../modules/networking
+    ../../modules/ai
     ./hardware-configuration.nix
   ];
 
