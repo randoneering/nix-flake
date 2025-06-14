@@ -19,13 +19,13 @@
     xkb.variant = "";
   };
 
-  services.gnome = {
-    settings = {
-      "org/gnome/desktop/background" = {
-        picture-uri = "./wallpaper.png";
-      };
-    };
-  };
+  # services.gnome = {
+  #   settings = {
+  #     "org/gnome/desktop/background" = {
+  #       picture-uri = "./wallpaper.png";
+  #     };
+  #   };
+  # };
   # disable gnome packages
   environment.gnome.excludePackages = with pkgs.gnome; [
     pkgs.atomix # puzzle game
