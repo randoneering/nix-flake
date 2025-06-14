@@ -8,7 +8,7 @@
     ../../modules/system.nix
     ../../modules/desktop/gnome.nix
     ../../modules/networking
-    ../../modules/ai
+    ../../modules/ai/ollama.nix
     ./hardware-configuration.nix
   ];
 
