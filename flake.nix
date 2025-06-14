@@ -38,7 +38,7 @@
           ];
         };
 
-      nix-lemur =
+      nix-L15 =
       let
         username = "randoneering";
         specialArgs = {inherit username;};
@@ -46,7 +46,7 @@
         inherit specialArgs;
         system = "x86-64_linux";
         modules = [
-          ./hosts/lemur/default.nix
+          ./hosts/L15/default.nix
           ./users/${username}/nixos.nix
           home-manager.nixosModules.home-manager
           {
