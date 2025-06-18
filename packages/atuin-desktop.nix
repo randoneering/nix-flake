@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
 
   src = fetchurl {
     url = "~/Documents/downloadlink.txt";
-    sha256 = "";
+    sha256 = "1zrps2a6ibz06h23n78v6lwwnaz1w1cc5c1frfv0w5p1vadx6v4a";
   };
 
   nativeBuildInputs = [
