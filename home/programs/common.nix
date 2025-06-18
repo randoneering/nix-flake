@@ -21,6 +21,9 @@
     # IDE/Database Manager
     zed-editor
     dbeaver-bin
+    mongosh
+    postgresql
+    mysql80
 
     # IaC
     docker-compose

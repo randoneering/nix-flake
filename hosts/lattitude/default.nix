@@ -7,8 +7,8 @@
   imports = [
     ../../modules/system.nix
     ../../modules/desktop/gnome.nix
-    ../../modules/networking
-    ../../modules/ai/ollama.nix
+    ../../modules/networking/tailscale.nix
+    ../../modules/networking/wireguard.nix
     ./hardware-configuration.nix
   ];
 
