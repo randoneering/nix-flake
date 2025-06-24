@@ -3,6 +3,53 @@
     sddm.enableHidpi = true;
   };
 
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "dracula-theme";
+      package = pkgs.dracula-theme;
+    }
+
+    gtk3.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+
+    gtk4.extraConfig = {
+      Settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+  }
+  home.sessionVariables.GTK_THEME = "dracula";
+
+  # ...
+
+  dconf.settings = {
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = [
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+      ];
+      "org/gnome/desktop/background" = {
+        picture-uri = "file:///home/randoneering/.local/share/backgrounds/2025-06-23-21-16-19-wallpaper.jpg";
+      };
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "dracula";
+      };
+    };
+  };
+
+  home.packages = with pkgs; [
+    gnomeExtensions.user-themes
+    gnomeExtensions.utcclock
+    gnomeExtensions.tiling-shell
+    gnomeExtensions.date-menu-formatter
+    dracula-theme
+  ];
+
   services.xserver = {
     enable = true;
 
@@ -19,13 +66,6 @@
     xkb.variant = "";
   };
 
-  # services.gnome = {
-  #   settings = {
-  #     "org/gnome/desktop/background" = {
-  #       picture-uri = "./wallpaper.png";
-  #     };
-  #   };
-  # };
   # disable gnome packages
   environment.gnome.excludePackages = with pkgs.gnome; [
     pkgs.atomix # puzzle game
@@ -39,4 +79,7 @@
     pkgs.tali # poker game
     pkgs.totem # video player
   ];
+
+
+
 }
