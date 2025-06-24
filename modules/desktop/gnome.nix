@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, username, ...}: {
   services.displayManager = {
     sddm.enableHidpi = true;
   };
@@ -34,7 +34,7 @@
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
       "org/gnome/desktop/background" = {
-        picture-uri = "file:///home/randoneering/.local/share/backgrounds/2025-06-23-21-16-19-wallpaper.jpg";
+        picture-uri = "file:///home/${username}/Documents/nix-flake/modules/desktop/wallpaper.jpg";
       };
       "org/gnome/shell/extensions/user-theme" = {
         name = "dracula";
