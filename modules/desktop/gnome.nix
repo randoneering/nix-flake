@@ -26,29 +26,29 @@
   home.sessionVariables.GTK_THEME = "dracula";
 
   # ...
-  dconf.enable = true;
-  dconf.settings = {
-    "org/gnome/shell" = {
-      disable-user-extensions = false;
-      enabled-extensions = [
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-      ];
-      "org/gnome/desktop/background" = {
-        picture-uri = "file:///home/${username}/Documents/nix-flake/modules/desktop/wallpaper.jpg";
-      };
-      "org/gnome/shell/extensions/user-theme" = {
-        name = "dracula";
-      };
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+        enabled-extensions = [
+          pkgs.gnomeExtensions.user-themes.extensionUuid
+          pkgs.gnomeExtensions.utcclock.extensionUuid
+          pkgs.gnomeExtensions.tiling-shell.extensionUuid
+          pkgs.gnomeExtensions.date-menu-formatter.extensionUuid
+        ];
+        "org/gnome/desktop/background" = {
+          picture-uri = "file:///home/${username}/Documents/nix-flake/modules/desktop/wallpaper.jpg";
+        };
+        "org/gnome/shell/extensions/user-theme" = {
+          name = "dracula";
+        };
+    }
+  }
+
     };
   };
-
-  home.packages = with pkgs; [
-    gnomeExtensions.user-themes
-    gnomeExtensions.utcclock
-    gnomeExtensions.tiling-shell
-    gnomeExtensions.date-menu-formatter
-    dracula-theme
-  ];
 
   services.xserver = {
     enable = true;
