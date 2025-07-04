@@ -12,6 +12,7 @@
     git
     wget
     popsicle
+    dconf
 
 
     # productivity

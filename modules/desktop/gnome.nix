@@ -1,4 +1,4 @@
-{pkgs, username, ...}: {
+{pkgs, username, config,...}: {
   services.displayManager = {
     sddm.enableHidpi = true;
   };
@@ -27,9 +27,8 @@
 
   # ...
 
-  dconf = {
-    enable = true;
-    settings = {
+  dconf.enable = true;
+    dconf.settings = {
       "org/gnome/shell" = {
         disable-user-extensions = false;
         enabled-extensions = [
@@ -45,7 +44,7 @@
           name = "dracula";
         };
     };
-  };
+
 
   services.xserver = {
     enable = true;
