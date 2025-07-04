@@ -44,9 +44,6 @@
         "org/gnome/shell/extensions/user-theme" = {
           name = "dracula";
         };
-    }
-  }
-
     };
   };
 
@@ -79,7 +76,5 @@
     pkgs.tali # poker game
     pkgs.totem # video player
   ];
-
-
-
+};
 }
