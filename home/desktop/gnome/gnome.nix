@@ -38,7 +38,7 @@
           pkgs.gnomeExtensions.date-menu-formatter.extensionUuid
         ];
         "org/gnome/desktop/background" = {
-          picture-uri = "file:///home/${username}/Documents/nix-flake/modules/desktop/wallpaper.jpg";
+          picture-uri = "file:///home/${username}/Documents/nix-flake/home/desktop/gnome/wallpaper.jpg";
         };
         "org/gnome/shell/extensions/user-theme" = {
           name = "dracula";
