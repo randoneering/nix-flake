@@ -7,12 +7,16 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    flox-nixpkgs.url = "github:flox/nixpkgs/stable";
+    flox.url = "github:flox/flox";
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
     home-manager,
+    flox,
+    flox-nixpkgs,
     ...
   }: {
     nixosConfigurations = {
@@ -48,6 +52,7 @@
         modules = [
           ./hosts/L15/default.nix
           ./users/${username}/nixos.nix
+          inputs.flox.nixosModules.flox
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

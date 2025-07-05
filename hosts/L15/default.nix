@@ -6,6 +6,7 @@
 }: {
   imports = [
     ../../modules/system.nix
+    ../../modules/desktop/gnome/gnome.nix
     ../../modules/networking
     ./hardware-configuration.nix
   ];
@@ -37,7 +38,7 @@
   };
 
   # Flatpak just in case
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
