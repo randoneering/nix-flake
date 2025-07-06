@@ -47,10 +47,6 @@
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
-  # environment.sessionVariables = {
-  #   EDITOR = "nano";
-  #   TERMINAL = "kitty";
-  # };
 
   system.stateVersion = "25.05";
 }
