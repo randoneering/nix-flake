@@ -31,6 +31,7 @@
           modules = [
             ./hosts/lattitude/default.nix
             ./users/${username}/nixos.nix
+            inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
