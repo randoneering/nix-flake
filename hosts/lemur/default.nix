@@ -14,17 +14,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # AMD Drivers
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "amdgpu" ];
+
   # Flox Settings
   nix.settings.trusted-substituters = [ "https://cache.flox.dev" ];
   nix.settings.trusted-public-keys = [ "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs=" ];
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nix-L15";
+  networking.hostName = "nix-lemur";
 
 
   # Enable NFS
@@ -32,7 +29,6 @@
   services.rpcbind.enable = true; # needed for NFS
   fileSystems."/mnt/jellyfin" = {
     device = "nas.randoneering.cloud:/mnt/randoneering_prod/Jellyfin";
-
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
@@ -42,16 +38,9 @@
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
 
-  # Flatpak just in case
-  # services.flatpak.enable = true;
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
-
-  # environment.sessionVariables = {
-  #   EDITOR = "nano";
-  #   TERMINAL = "kitty";
-  # };
 
   system.stateVersion = "25.05";
 }
