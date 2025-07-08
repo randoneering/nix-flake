@@ -10,6 +10,9 @@
     ../../modules/networking
     ./hardware-configuration.nix
   ];
+
+  boot.initrd.luks.devices."luks-6af29cfc-edec-44d4-b361-a1d2f708666d".device = "/dev/disk/by-uuid/6af29cfc-edec-44d4-b361-a1d2f708666d";
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
