@@ -14,9 +14,12 @@
     popsicle
     dconf
 
+    # Accounting
+    invoiceplane
+
 
     # productivity
-    joplin-desktop
+    obsidian
     super-productivity
 
     # IDE/Database Manager
