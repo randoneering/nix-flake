@@ -40,6 +40,7 @@
     # Security
     syft
     grype
+    proton-pass
     bitwarden
   ];
 }
