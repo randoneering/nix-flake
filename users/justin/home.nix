@@ -4,5 +4,6 @@
     ../../home/programs
     ../../home/shell
     ../../home/programs/personal.nix
+    ../../home/utils
   ];
 }
