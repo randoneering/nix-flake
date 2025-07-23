@@ -13,6 +13,9 @@
     wget
     popsicle
     dconf
+    freshfetch
+    gpufetch
+    oterm
 
     # Accounting
     invoiceplane
@@ -21,6 +24,7 @@
     # productivity
     obsidian
     super-productivity
+
 
     # IDE/Database Manager
     zed-editor
