@@ -11,4 +11,9 @@ programs.kitty = {
       window_padding_width = 10;
     };
 };
+
+programs.ghostty = {
+  enable = true;
+
+};
 }
