@@ -14,7 +14,9 @@ programs.kitty = {
 
 programs.ghostty = {
   enable = true;
-  themes = "Dracula";
+  settings = {
+    theme = "Dracula";
+  };
   enableFishIntegration = true;
   enableBashIntegration = true;
 };
