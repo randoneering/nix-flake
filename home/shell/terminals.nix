@@ -16,6 +16,7 @@ programs.ghostty = {
   enable = true;
   settings = {
     theme = "Dracula";
+    shell-integration-features = "sudo";
   };
   enableFishIntegration = true;
   enableBashIntegration = true;
