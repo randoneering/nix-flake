@@ -18,8 +18,6 @@
     oterm
 
     # Accounting
-    invoiceplane
-
 
     # productivity
     obsidian
