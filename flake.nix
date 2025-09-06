@@ -51,7 +51,7 @@
         inherit specialArgs;
         system = "x86-64_linux";
         modules = [
-          ./hosts/L15/default.nix
+          ./hosts/L16/default.nix
           ./users/${username}/nixos.nix
           inputs.flox.nixosModules.flox
           home-manager.nixosModules.home-manager
