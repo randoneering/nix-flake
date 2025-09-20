@@ -85,7 +85,27 @@
           }
         ];
       };
+      nix-wks =
+      let
+        username = "justin";
+        specialArgs = {inherit username;};
+      in nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        system = "x86-64_linux";
+        modules = [
+          ./hosts/wks/default.nix
+          ./users/${username}/nixos.nix
+          inputs.flox.nixosModules.flox
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
 
+            home-manager.extraSpecialArgs = inputs // specialArgs;
+            home-manager.users.${username} = import ./users/${username}/home.nix;
+          }
+        ];
+      };
       db03 = nixpkgs.lib.nixosSystem {
         system = "x86-64_linux";
         modules = [
