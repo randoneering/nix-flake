@@ -38,7 +38,8 @@
     # Configuration Management
     ansible
     ansible-lint
-
+    # Gaming
+    steam
     # Security
     syft
     grype
