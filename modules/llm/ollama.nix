@@ -13,7 +13,7 @@
     acceleration = "cuda";
     loadModels = [ "llama3.2:3b" "deepseek-r1:1.5b" "gemma3:12b" "qwen3:8b" "qwen3:14b"];
     openFirewall = true;
-    host = ""; # Make Ollama accesible outside of localhost
+    host = "localhost"; # Make Ollama accesible outside of localhost
   };
   # Open-Webui setup
   services.open-webui = {
