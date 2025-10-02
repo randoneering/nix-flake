@@ -16,7 +16,7 @@
   glib,
   glib-networking,
   gcc,
-  pkg-config,
+  pkg-config
 }:
 
 stdenv.mkDerivation rec {
@@ -119,7 +119,10 @@ stdenv.mkDerivation rec {
     description = "Atuin Desktop";
     homepage = "https://atuin.sh/#desktop-section";
     license = licenses.asl20;
-    maintainers = [randoneering, dzervas];
+    maintainers = [
+      randoneering
+      dzervas
+    ];
     platforms = ["x86_64-linux"];
   };
 }

@@ -5,6 +5,8 @@
 
     # utils
     btop
+    dpkg
+    cargo
     flameshot
     remmina
     ripgrep
@@ -16,7 +18,6 @@
     freshfetch
     gpufetch
     oterm
-
     # Accounting
 
     # productivity
