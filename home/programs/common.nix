@@ -7,6 +7,7 @@
     btop
     dpkg
     cargo
+    rustc
     flameshot
     remmina
     ripgrep
