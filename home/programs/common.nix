@@ -16,6 +16,7 @@
     freshfetch
     gpufetch
     oterm
+    nixfmt-rfc-style
 
     # Accounting
 
@@ -39,7 +40,10 @@
     ansible
     ansible-lint
     # Gaming
-    steam
+    steam-unwrapped
+    steam-run
+
+
     # Security
     syft
     grype
