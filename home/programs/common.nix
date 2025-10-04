@@ -5,6 +5,9 @@
 
     # utils
     btop
+    dpkg
+    cargo
+    rustc
     flameshot
     remmina
     ripgrep
@@ -16,8 +19,6 @@
     freshfetch
     gpufetch
     oterm
-    nixfmt-rfc-style
-
     # Accounting
 
     # productivity

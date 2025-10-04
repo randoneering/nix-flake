@@ -10,4 +10,5 @@ programs.ghostty = {
   enableFishIntegration = true;
   enableBashIntegration = true;
 };
+
 }
