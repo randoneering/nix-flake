@@ -19,7 +19,9 @@
     freshfetch
     gpufetch
     oterm
-    # Accounting
+    # media
+    steam-unwrapped
+    cider-2
 
     # productivity
     obsidian
