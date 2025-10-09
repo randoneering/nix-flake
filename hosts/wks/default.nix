@@ -6,6 +6,7 @@
       ../../modules/system.nix
       ../../modules/desktop/gnome/gnome.nix
       ../../modules/networking
+      ../../modules/llm
       ./nvidia_gpu.nix
       ./hardware-configuration.nix
     ];

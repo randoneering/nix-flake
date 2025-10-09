@@ -43,7 +43,10 @@
     ansible
     ansible-lint
     # Gaming
-    steam
+    steam-unwrapped
+    steam-run
+
+
     # Security
     syft
     grype
