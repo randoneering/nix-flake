@@ -20,8 +20,9 @@
     gpufetch
     oterm
     # media
-    steam-unwrapped
     cider
+    steam-tui
+    steamcmd
 
     # productivity
     obsidian
