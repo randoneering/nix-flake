@@ -20,6 +20,7 @@
   boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.grub.useOSProber = true;
   boot.initrd.luks.devices."luks-25ac66f8-28c2-4b24-9f65-2aa0a8f0ad2c".device = "/dev/disk/by-uuid/25ac66f8-28c2-4b24-9f65-2aa0a8f0ad2c";
+  programs.steam.enable = true
 
   # Setup keyfile
   boot.initrd.secrets = {
@@ -35,7 +36,8 @@
   # Networking
   networking.hostName = "nix-wks";
   networking.networkmanager.enable = true;
-
+  # Enable 32bit
+  hardware.opengl.driSupport32Bit = true;
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS

@@ -23,7 +23,7 @@
     cider
     steam-tui
     steamcmd
-
+    steam-run-native
     # productivity
     obsidian
     super-productivity
@@ -43,9 +43,6 @@
     # Configuration Management
     ansible
     ansible-lint
-    # Gaming
-    steam-unwrapped
-    steam-run
 
 
     # Security
