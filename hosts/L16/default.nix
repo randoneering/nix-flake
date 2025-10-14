@@ -21,6 +21,8 @@
   networking.hostName = "nix-l16";
   networking.networkmanager.enable = true;
 
+  # Steam
+  programs.steam.enable = true;
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS

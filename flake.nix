@@ -9,6 +9,8 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flox-nixpkgs.url = "github:flox/nixpkgs/stable";
     flox.url = "github:flox/flox";
+    kickstart-nix.nvim.url = "github:nix-community/kickstart-nix.nvim"
+
   };
 
   outputs = inputs @ {
@@ -17,6 +19,7 @@
     home-manager,
     flox,
     flox-nixpkgs,
+    kickstart-nix.nvim,
     ...
   }: {
     nixosConfigurations = {

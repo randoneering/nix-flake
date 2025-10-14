@@ -7,7 +7,6 @@
       ../../modules/desktop/gnome/gnome.nix
       ../../modules/networking
       ../../modules/llm
-      ../../modules/steam
       ./nvidia_gpu.nix
       ./hardware-configuration.nix
     ];
@@ -20,7 +19,6 @@
   boot.loader.grub.device = "/dev/nvme0n1";
   boot.loader.grub.useOSProber = true;
   boot.initrd.luks.devices."luks-25ac66f8-28c2-4b24-9f65-2aa0a8f0ad2c".device = "/dev/disk/by-uuid/25ac66f8-28c2-4b24-9f65-2aa0a8f0ad2c";
-  programs.steam.enable = true
 
   # Setup keyfile
   boot.initrd.secrets = {

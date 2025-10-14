@@ -19,11 +19,11 @@
     freshfetch
     gpufetch
     oterm
+    nvim-pkg
     # media
     cider
-    steam-tui
-    steamcmd
-    steam-run-native
+
+
     # productivity
     obsidian
     super-productivity
