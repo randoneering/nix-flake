@@ -19,7 +19,6 @@
     freshfetch
     gpufetch
     oterm
-    nvim-pkg
     # media
     cider
 
