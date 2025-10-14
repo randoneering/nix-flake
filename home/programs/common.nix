@@ -21,7 +21,7 @@
     oterm
     # media
     steam-unwrapped
-    cider-2
+    cider
 
     # productivity
     obsidian
