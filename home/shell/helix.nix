@@ -1,4 +1,4 @@
-{config, pkgs ...}:{
+{config, pkgs, ...}:{
 
     programs.helix = {
     enable = true;
@@ -16,7 +16,11 @@
         auto-format = true;
         formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
       }];
+      language = [{
+        name = "python";
+        auto-format = true;
+        formatter.command = "${pkgs.ruff}/bin/ruff";
+      }];
     };
-    ];
-    };
+  };
 }

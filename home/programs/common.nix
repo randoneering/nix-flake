@@ -8,6 +8,7 @@
     dpkg
     cargo
     rustc
+    ruff
     flameshot
     remmina
     ripgrep
@@ -19,6 +20,7 @@
     freshfetch
     gpufetch
     oterm
+
     # media
     cider
 
