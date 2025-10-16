@@ -15,12 +15,13 @@
         name = "nix";
         auto-format = true;
         formatter.command = "${pkgs.nixfmt}/bin/nixfmt";
-      }];
-      language = [{
+      }
+      {
         name = "python";
         auto-format = true;
         formatter.command = "${pkgs.ruff}/bin/ruff";
-      }];
+      }
+      ];
     };
   };
 }
