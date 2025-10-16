@@ -3,7 +3,7 @@
     programs.helix = {
     enable = true;
     settings = {
-        theme = "everforest_dark";
+        theme = "gruvbox";
         editor.cursor-shape = {
         normal = "block";
         insert = "bar";
