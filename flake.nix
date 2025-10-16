@@ -10,12 +10,14 @@
     flox-nixpkgs.url = "github:flox/nixpkgs/stable";
     flox.url = "github:flox/flox";
     kickstart-nvim.url = "github:nix-community/kickstart-nix.nvim";
+    kickstart-nvim.inputs.nixpkgs.follows = "unstable-nixpkgs";
 
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
+    unstable-nixpkgs,
     home-manager,
     flox,
     flox-nixpkgs,
@@ -53,9 +55,6 @@
       in nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         system = "x86-64_linux";
-        overlays = [
-          kickstart-nvim.overlays.default
-        ];
         modules = [
           ./hosts/L16/default.nix
           ./users/${username}/nixos.nix
