@@ -27,7 +27,7 @@
 
     # productivity
     obsidian
-    super-productivity
+    planify
 
 
     # IDE/Database Manager
