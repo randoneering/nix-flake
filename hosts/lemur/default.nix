@@ -2,6 +2,8 @@
 {
   config,
   pkgs,
+  lib,
+  username,
   ...
 }: {
   imports = [
@@ -11,7 +13,7 @@
     ./hardware-configuration.nix
   ];
 
-  boot.initrd.luks.devices."luks-6af29cfc-edec-44d4-b361-a1d2f708666d".device = "/dev/disk/by-uuid/6af29cfc-edec-44d4-b361-a1d2f708666d";
+  boot.initrd.luks.devices."luks-1f6de9c7-37ee-491d-8639-33efc75ee9d0".device = "/dev/disk/by-uuid/1f6de9c7-37ee-491d-8639-33efc75ee9d0";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

@@ -6,11 +6,6 @@
     # utils
     btop
     dpkg
-    cargo
-    rustc
-    ruff
-    flameshot
-    remmina
     ripgrep
     nfs-utils
     git
@@ -18,17 +13,15 @@
     popsicle
     dconf
     freshfetch
-    gpufetch
-    oterm
 
-    # media
-    cider
-
+    # rust
+    cargo
+    rustc
+    ruff
 
     # productivity
     obsidian
     planify
-
 
     # IDE/Database Manager
     zed-editor
@@ -44,7 +37,6 @@
     # Configuration Management
     ansible
     ansible-lint
-
 
     # Security
     syft

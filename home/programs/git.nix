@@ -1,15 +1,15 @@
-{pkgs, ...}: {
+{pkgs, username, ...}: {
   home.packages = [pkgs.gh];
 
   programs.git = {
     enable = true;
-    userName = "randoneering";
+    userName = "${username}";
     userEmail = "justin@randoneering.tech";
     extraConfig = {
       # Sign all commits using ssh key
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/l15.pub";
+      user.signingkey = "~/.ssh/nix-lemur.pub";
   };
   };
 }
