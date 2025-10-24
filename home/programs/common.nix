@@ -19,6 +19,10 @@
     rustc
     ruff
 
+    # python
+    ruff
+    uv
+
     # productivity
     obsidian
     planify
