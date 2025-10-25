@@ -11,6 +11,7 @@
     };
     librewolf = {
       enable = true;
+      profiles.${username} = {};
     };
   };
 }
