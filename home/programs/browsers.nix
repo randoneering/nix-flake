@@ -9,5 +9,8 @@
       enable = true;
       profiles.${username} = {};
     };
+    librewolf = {
+      enable = true;
+    };
   };
 }
