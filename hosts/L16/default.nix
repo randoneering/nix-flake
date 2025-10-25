@@ -23,6 +23,19 @@
 
   # Steam
   programs.steam.enable = true;
+
+  # Git configuration
+  programs.git = {
+    enable = true;
+    userName = "${username}";
+    userEmail = "justin@randoneering.tech";
+    extraConfig = {
+      # Sign all commits using ssh key
+      commit.gpgsign = true;
+      gpg.format = "ssh";
+      user.signingkey = "~/.ssh/nix-16.pub";
+  };
+
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS
