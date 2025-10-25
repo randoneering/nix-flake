@@ -7,6 +7,8 @@
     gnome-tweaks
     gnome-extension-manager
 
+    # Gaming
+    steam-unwrapped
     # Social
     discord
     slack
