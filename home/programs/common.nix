@@ -19,6 +19,16 @@
     rustc
     ruff
     rustup
+    mold #linker
+
+    #zed dev
+    make
+    cmake
+    jq
+    curl
+    gettext
+    elfutils
+    musl
 
     # python
     ruff
