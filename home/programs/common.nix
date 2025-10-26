@@ -18,6 +18,7 @@
     cargo
     rustc
     ruff
+    rustup
 
     # python
     ruff
