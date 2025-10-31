@@ -24,7 +24,7 @@
     nixosConfigurations = {
       nix-lattitude = let
         username = "randoneering";
-        hostname = "nix-lattitude"
+        hostname = "nix-lattitude";
         specialArgs = {inherit username hostname;};
       in
         nixpkgs.lib.nixosSystem {
@@ -72,7 +72,7 @@
       nix-lemur =
       let
         username = "justin";
-        hostname = "nix-lemur"
+        hostname = "nix-lemur";
         specialArgs = {inherit username hostname;};
       in nixpkgs.lib.nixosSystem {
         inherit specialArgs;
@@ -94,7 +94,7 @@
       nix-wks =
       let
         username = "justin";
-        hostname = "nix-wks"
+        hostname = "nix-wks";
         specialArgs = {inherit username hostname;};
       in nixpkgs.lib.nixosSystem {
         inherit specialArgs;
