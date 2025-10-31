@@ -1,4 +1,5 @@
-{ lib,
+{
+  lib,
   stdenv,
   fetchurl,
   dpkg,
@@ -16,9 +17,8 @@
   glib,
   glib-networking,
   gcc,
-  pkg-config
+  pkg-config,
 }:
-
 stdenv.mkDerivation rec {
   pname = "atuin-desktop";
   version = "0.1.0";
@@ -55,7 +55,7 @@ stdenv.mkDerivation rec {
     glib-networking
 
     # Runtime dependencies
-    gcc.cc.lib  # For libgcc_s.so.1
+    gcc.cc.lib # For libgcc_s.so.1
 
     openssl
   ];

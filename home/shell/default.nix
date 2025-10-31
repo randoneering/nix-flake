@@ -1,5 +1,8 @@
-{config, pkgs, ...}:
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./common.nix
     ./starship.nix
@@ -8,5 +11,4 @@
     ./atuin.nix
     ./bash.nix
   ];
-
 }

@@ -1,15 +1,18 @@
-{pkgs, username, config,...}: {
+{
+  pkgs,
+  username,
+  config,
+  ...
+}: {
   services.displayManager = {
     sddm.enableHidpi = true;
   };
-
 
   # xdg.portal = {
   #   enable = true;
   #   xdgOpenUSePortal = true;
   #   extraPortals = with pkgs; [xdg-desktop-portal-gnome];
   # };
-
 
   # gtk = {
   #   enable = true;
@@ -50,8 +53,6 @@
   #         name = "dracula";
   #       };
   #   };
-
-
 
   services.xserver = {
     enable = true;

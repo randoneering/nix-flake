@@ -1,8 +1,9 @@
-{config, pkgs, ...}:
 {
-
-
-  home.packages = [ pkgs.rclone ];
+  config,
+  pkgs,
+  ...
+}: {
+  home.packages = [pkgs.rclone];
   # systemd.user.services.rclone-mounts = {
   #   Unit = {
   #     Description = "Rclone ProtonDrive rclone";

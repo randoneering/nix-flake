@@ -1,5 +1,8 @@
-{config, lib,...}:
 {
+  config,
+  lib,
+  ...
+}: {
   programs = {
     starship = {
       enable = true;
@@ -9,12 +12,8 @@
       settings = {
         add_newline = false;
         command_timeout = 1000;
-        format =  "$all";
+        format = "$all";
       };
     };
   };
-
-
-
-
 }

@@ -1,6 +1,8 @@
-{hostname, username,...}:
 {
+  hostname,
+  username,
+  ...
+}: {
   users.users.justin = {
-
-};
+  };
 }

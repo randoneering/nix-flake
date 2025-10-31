@@ -19,15 +19,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-
   # Flox Settings
-  nix.settings.trusted-substituters = [ "https://cache.flox.dev" ];
-  nix.settings.trusted-public-keys = [ "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs=" ];
+  nix.settings.trusted-substituters = ["https://cache.flox.dev"];
+  nix.settings.trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
 
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "nix-lemur";
-
 
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
@@ -42,7 +40,6 @@
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
-
 
   # Enable Bluetooth
   hardware.bluetooth.enable = true;

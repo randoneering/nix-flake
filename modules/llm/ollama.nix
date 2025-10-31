@@ -3,7 +3,7 @@
   lib,
   username,
   ...
-}:{
+}: {
   # systemd.services.ollama.serviceConfig = {
   #   Environment = [ "OLLAMA_HOST=10.10.1.197:11434" ];
   # };
@@ -11,7 +11,7 @@
   services.ollama = {
     enable = true;
     acceleration = "cuda";
-    loadModels = [ "llama3.2:3b" "deepseek-r1:1.5b" "gemma3:12b" "qwen3:8b" "qwen3:14b"];
+    loadModels = ["llama3.2:3b" "deepseek-r1:1.5b" "gemma3:12b" "qwen3:8b" "qwen3:14b"];
     openFirewall = true;
     host = "10.10.1.232"; # Make Ollama accesible outside of localhost
   };
@@ -28,5 +28,4 @@
       OLLAMA_BASE_URL = "http://10.10.1.232:11434";
     };
   };
-
 }

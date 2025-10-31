@@ -45,6 +45,7 @@ sudo nixos-rebuild switch --flake /path/to/this/flake#hostname
 ├── home/                  # Home Manager configurations
 │   ├── programs/          # Nix Packages and configurations
 │   └── shell/             # Shell related configurations
+│   └── utils/             # Utility based packages/tooling
 ├── hosts/                 # System-specific configurations
 │   ├── hostname1/
 │   └── hostname2/

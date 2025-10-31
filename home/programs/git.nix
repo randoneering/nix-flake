@@ -1,4 +1,10 @@
-{config, pkgs, username, hostname, ...}: {
+{
+  config,
+  pkgs,
+  username,
+  hostname,
+  ...
+}: {
   home.packages = [pkgs.gh];
 
   programs.git = {
@@ -9,6 +15,6 @@
       commit.gpgsign = true;
       gpg.format = "ssh";
       user.signingkey = "~/.ssh/${hostname}.pub";
-  };
+    };
   };
 }

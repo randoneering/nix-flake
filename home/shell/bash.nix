@@ -1,9 +1,12 @@
-{config, username, ...}:
 {
+  config,
+  username,
+  ...
+}: {
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-    eval $(ssh-agent)
+      eval $(ssh-agent)
     '';
   };
 }

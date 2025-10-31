@@ -1,7 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
-
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   hardware.graphics = {
     enable = true;
   };
@@ -9,7 +11,7 @@
   hardware.nvidia-container-toolkit = {
     enable = true;
   };
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
     open = true;
@@ -18,5 +20,4 @@
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
-
 }

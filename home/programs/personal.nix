@@ -16,6 +16,5 @@
 
     # Office
     onlyoffice-desktopeditors
-
   ];
 }
