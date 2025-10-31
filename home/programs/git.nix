@@ -9,7 +9,7 @@
       # Sign all commits using ssh key
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/nix-l16.pub";
+      user.signingkey = "~/.ssh/${hostname}.pub";
   };
   };
 }
