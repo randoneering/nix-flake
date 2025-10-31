@@ -6,7 +6,6 @@
       enableBashIntegration = config.programs.bash.enable;
       enableFishIntegration = config.programs.fish.enable;
       enableZshIntegration = config.programs.zsh.enable;
-      # https://github.com/etrigan63/Catppuccin-starship
       settings = {
         add_newline = false;
         command_timeout = 1000;

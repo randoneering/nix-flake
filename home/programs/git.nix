@@ -1,4 +1,4 @@
-{pkgs, username, ...}: {
+{config, pkgs, username, ...}: {
   home.packages = [pkgs.gh];
 
   programs.git = {
@@ -9,7 +9,7 @@
       # Sign all commits using ssh key
       commit.gpgsign = true;
       gpg.format = "ssh";
-      user.signingkey = "~/.ssh/nix-lemur.pub";
+      user.signingkey = "~/.ssh/nix-l16.pub";
   };
   };
 }

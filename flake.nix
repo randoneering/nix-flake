@@ -48,7 +48,10 @@
       nix-L16 =
       let
         username = "justin";
-        specialArgs = {inherit username;};
+        hostname = "nix-l16";
+        specialArgs = {inherit
+          username;
+        };
       in nixpkgs.lib.nixosSystem {
         inherit specialArgs;
         system = "x86-64_linux";
