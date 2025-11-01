@@ -13,12 +13,11 @@
         add_newline = false;
         continuation_prompt = "'▶▶";
         command_timeout = 1000;
-                #format = lib.concatStrings [
         format = lib.concatStrings [
-          ""
+          " "
           "$directory"
           "$git_branch$git_commit$git_state $git_status"
-          "$character"];
+          "⋙ "];
         right_format = lib.concatStrings [
         "$python"
         "$rust"
@@ -31,43 +30,43 @@
         "$time"];
         directory = {
             disabled = false;
-            format = "[$path](bold fg:#8be9fd)";
+            format = "[$path](bold fg:#458588)";
             truncate_to_repo = false;
         };
         git_branch = {
-        format = " [  $branch](fg:#9198a1)";
+        format = " [  $branch](fg:#b16286)";
         };
         git_status = {
         ahead = "⇡$count";
         behind = "⇣$count";
         diverged = "⇕⇡$ahead_count⇣$behind_count";
-        format = "[[( $all_status$ahead_behind )](fg:#769ff0)]($style)";
-        style = "bg:#394260";
+        format = "[[( $all_status$ahead_behind )](fg:#d79921)]($style)";
+        style = "#394260";
         };
         time = {
         disabled = false;
-        format = "[[  $time ](fg:#a0a9cb )]($style)";
+        format = "[[  $time ](fg:#f42c3e )]($style)";
         time_format = "%R";
         };
         python = {
         format = "[$symbol]($virtualenv) $version]($style)";
-        style = "bold bright-yellow";
+        style = "#fabd2f";
         symbol = "[ ](bold bright-blue)";
         version_format = "$raw";
         };
         rust = {
-        style = "bold bright-red";
+        style = "#f42c3e";
         format = " rs(italic) $symbol($style)";
         symbol = " ";
         };
         aws = {
         format = " [aws](italic) [$symbol $profile $region]($style)";
-        style = "bold blue";
+        style = "#458588";
         symbol = " ";
         };
 
         memory_usage = {
-        style = "bold bright-cyan";
+        style = "#689d6a";
         format = " mem [$ram( $swap)]($style)";
         symbol = "▪▫▪ ";
         };
@@ -76,22 +75,22 @@
         format = "[$symbol nix⎪$state⎪]($style) [$name](italic dimmed white)";
         impure_msg = "[⌽](bold dimmed red)";
         pure_msg = "[⌾](bold dimmed green)";
-        style = "bold italic dimmed blue";
+        style = "#99c6ca";
         symbol = " ";
-        unknown_msg = "[◌](bold dimmed ellow)";
+        unknown_msg = "[◌](bold dimmed yellow)";
         };
         kubernetes = {
-        style = "bold bright-cyan";
+        style = "#7ec16e";
         format = " [kubernetes](italic) [$symbol]($style)";
         symbol = " ";
         };
         helm = {
-        style = "bold bright-yellow";
+        style = "#fabd2f";
         format = " [helm](italic) [$symbol]($style)";
         symbol = "helm ";
         };
         terraform = {
-        style = "bold bright-cyan";
+        style = "#7ec16e";
         format = " [terraform](italic) [$symbol]($style)";
         symbol = "terraform ";
         };
