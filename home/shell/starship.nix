@@ -17,7 +17,7 @@
           " "
           "$directory"
           "$git_branch$git_commit$git_state $git_status"
-          "⋙ "];
+          "⋙\n"];
         right_format = lib.concatStrings [
         "$python"
         "$rust"
