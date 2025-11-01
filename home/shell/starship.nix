@@ -17,7 +17,7 @@
           " "
           "$directory"
           "$git_branch$git_commit$git_state $git_status"
-          "⋙\n"];
+          "⋙  "];
         right_format = lib.concatStrings [
         "$python"
         "$rust"
@@ -45,7 +45,7 @@
         };
         time = {
         disabled = false;
-        format = "[[  $time ](fg:#f42c3e )]($style)";
+        format = "[[🕐$time ](fg:#f42c3e )]($style)";
         time_format = "%R";
         };
         python = {
