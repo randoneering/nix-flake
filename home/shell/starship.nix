@@ -45,7 +45,7 @@
         };
         time = {
         disabled = false;
-        format = "[[🕐$time ](fg:#f42c3e )]($style)";
+        format = "[[$time](fg:#f42c3e )]($style)";
         time_format = "%R";
         };
         python = {
