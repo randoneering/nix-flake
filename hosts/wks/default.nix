@@ -54,6 +54,12 @@
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
 
+  # networking.firewall = {
+  #   enable = true;
+  #   allowedTCPPorts = [ 22 80 443 14434 8080];
+  #   allowedUDPPorts = [ 22 80 443 14434 8080];
+  # };
+
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
