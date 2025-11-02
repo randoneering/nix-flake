@@ -74,8 +74,12 @@
     enable = true;
     settings = {
       PermitRootLogin = "no"; # disable root login
+      KbdInteractiveAuthentication = false;
+      PasswordAuthentication = false;
+
     };
   };
+  services.fail2ban.enable = true;
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
