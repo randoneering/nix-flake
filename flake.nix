@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware";
-    nixpkgs-update.url = "https://github.com/nix-community/nixpkgs-update";
+    nixpkgs-update.url = "github:nix-community/nixpkgs-update";
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flox-nixpkgs.url = "github:flox/nixpkgs/stable";

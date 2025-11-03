@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+
   home.packages = with pkgs; [
     # archives
     zip
@@ -21,6 +22,9 @@
     # python
     ruff
     uv
+
+    # nix dev
+    niv
 
     # productivity
     obsidian
@@ -46,5 +50,8 @@
     grype
     proton-pass
     bitwarden
+
+
+
   ];
 }

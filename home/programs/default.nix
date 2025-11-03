@@ -4,5 +4,6 @@
     ./common.nix
     ./git.nix
     ./personal.nix
+    ./nixpkgs-updater.nix
   ];
 }
