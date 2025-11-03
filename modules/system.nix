@@ -89,7 +89,7 @@
 
   environment.sessionVariables = {
     EDITOR = "nano";
-    TERMINAL = "kitty";
+    TERMINAL = "ghostty";
   };
 
   # Enable sound with pipewire.
