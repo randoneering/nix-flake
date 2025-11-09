@@ -50,7 +50,7 @@
     grype
     proton-pass
     bitwarden
-    proton-vpn
+    protonvpn-gui
 
 
 
