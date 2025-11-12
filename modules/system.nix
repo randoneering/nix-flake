@@ -79,7 +79,7 @@
 
     };
   };
-  services.fail2ban.enable = true;
+  services.fail2ban.enable = false;
   programs.mtr.enable = true;
   programs.gnupg.agent = {
     enable = true;
