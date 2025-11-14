@@ -14,6 +14,7 @@
     popsicle
     dconf
     freshfetch
+    gimp3
 
     # rust
     cargo
