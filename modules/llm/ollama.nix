@@ -3,11 +3,11 @@
   lib,
   username,
   ...
-}: {
-  systemd.services.ollama.serviceConfig = {
-    Environment = [ "OLLAMA_HOST=10.10.1.232:11434" ];
-  };
-  # Ollama Setup
+}:{
+  # systemd.services.ollama.serviceConfig = {
+  #   Environment = [ "OLLAMA_HOST=10.10.1.232:11434" ];
+  # };
+   # Ollama Setup
   services.ollama = {
     enable = true;
     acceleration = "cuda";

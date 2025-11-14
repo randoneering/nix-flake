@@ -37,6 +37,7 @@
     mongosh
     postgresql
     mysql80
+    pgformatter
 
     # IaC
     docker-compose
