@@ -6,7 +6,7 @@
 }:{
   systemd.services.ollama.serviceConfig = {
     Environment = [ "OLLAMA_HOST=10.10.1.232:11434" ];
-  };
+    };
    # Ollama Setup
   services.ollama = {
     enable = true;
@@ -17,7 +17,7 @@
   };
   # Open-Webui setup
   services.open-webui = {
-    enable = true
+    enable = true;
     openFirewall = true;
     host = "10.10.1.232";
     environment = {
