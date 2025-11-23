@@ -53,7 +53,11 @@
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
-
+  fileSystems."/mnt/steam" = {
+    device = "/dev/sda";
+    fsType = "ext4";
+    options = ["nofail" "x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
+  };
   networking.firewall = {
     enable = true;
     allowedTCPPortRanges = [
