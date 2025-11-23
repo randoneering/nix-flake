@@ -54,7 +54,7 @@
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
   fileSystems."/mnt/steam" = {
-    device = "/dev/sda";
+    device = "/dev/disk/by-partuuid/9E6B9EC6-AB41-4B79-9609-B48B6FB2CA43";
     fsType = "ext4";
     options = ["nofail"];
   };
