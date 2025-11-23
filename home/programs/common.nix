@@ -45,7 +45,7 @@
 
     # Configuration Management
     ansible
-    ansible-lint
+    ##ansible-lint failing to build
 
     # Security
     syft
