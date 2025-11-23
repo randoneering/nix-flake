@@ -56,7 +56,7 @@
   fileSystems."/mnt/steam" = {
     device = "/dev/sda";
     fsType = "ext4";
-    options = ["nofail" "x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
+    options = ["nofail"];
   };
   networking.firewall = {
     enable = true;
