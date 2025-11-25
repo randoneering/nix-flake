@@ -23,9 +23,9 @@
     ...
   }: {
     nixosConfigurations = {
-      nix-lattitude = let
+      nix-station = let
         username = "randoneering";
-        hostname = "nix-lattitude";
+        hostname = "nix-station";
         specialArgs = {inherit username hostname;};
       in
         nixpkgs.lib.nixosSystem {
@@ -33,7 +33,7 @@
           system = "x86_64-linux";
 
           modules = [
-            ./hosts/lattitude/default.nix
+            ./hosts/${hostname}/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
