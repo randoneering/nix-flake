@@ -14,7 +14,8 @@
         continuation_prompt = "'▶▶";
         command_timeout = 1000;
         format = lib.concatStrings [
-          " "
+          " | "
+          "$hostname"
           "$directory"
           "$git_branch$git_commit$git_state $git_status"
           "⋙  "];
@@ -58,6 +59,9 @@
         style = "#f42c3e";
         format = " rs(italic) $symbol($style)";
         symbol = " ";
+        };
+        hostname = {
+        format = "$hostname ";
         };
         aws = {
         format = " [aws](italic) [$symbol $profile $region]($style)";
