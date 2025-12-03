@@ -8,7 +8,7 @@
 }: {
   imports = [
     ../../modules/system.nix
-    ../../modules/desktop/gnome/gnome.nix
+    ../../modules/desktop/cosmic/cosmic.nix
     ../../modules/networking
     ./hardware-configuration.nix
   ];
@@ -49,5 +49,5 @@
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 }

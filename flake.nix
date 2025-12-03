@@ -23,54 +23,6 @@
     ...
   }: {
     nixosConfigurations = {
-      nix-station = let
-        username = "randoneering";
-        hostname = "nix-station";
-        specialArgs = {inherit username hostname;};
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86_64-linux";
-
-          modules = [
-            ./hosts/${hostname}/default.nix
-            ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-
-              home-manager.extraSpecialArgs = inputs // specialArgs;
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            }
-          ];
-        };
-
-      nix-L16 = let
-        username = "justin";
-        hostname = "nix-l16";
-        specialArgs = {
-          inherit username hostname;
-        };
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86-64_linux";
-          modules = [
-            ./hosts/L16/default.nix
-            ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-
-              home-manager.extraSpecialArgs = inputs // specialArgs;
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            }
-          ];
-        };
       nix-lemur = let
         username = "justin";
         hostname = "nix-lemur";
@@ -81,28 +33,6 @@
           system = "x86-64_linux";
           modules = [
             ./hosts/lemur/default.nix
-            ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-
-              home-manager.extraSpecialArgs = inputs // specialArgs;
-              home-manager.users.${username} = import ./users/${username}/home.nix;
-            }
-          ];
-        };
-      nix-wks = let
-        username = "justin";
-        hostname = "nix-wks";
-        specialArgs = {inherit username hostname;};
-      in
-        nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
-          system = "x86-64_linux";
-          modules = [
-            ./hosts/wks/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
