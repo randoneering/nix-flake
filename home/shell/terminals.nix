@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.ghostty = {
+  programs.ghostty-bin = {
     enable = true;
     settings = {
       theme = "Popping and Locking";
