@@ -51,7 +51,7 @@
     syft
     grype
     proton-pass
-    bitwarden-desktop
+    bitwarden
     protonvpn-gui
 
 

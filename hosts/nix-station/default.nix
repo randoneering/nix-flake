@@ -2,8 +2,6 @@
 {
   config,
   pkgs,
-  lib,
-  username,
   ...
 }: {
   imports = [
@@ -13,24 +11,24 @@
     ./hardware-configuration.nix
   ];
 
-  boot.initrd.luks.devices."luks-1f6de9c7-37ee-491d-8639-33efc75ee9d0".device = "/dev/disk/by-uuid/1f6de9c7-37ee-491d-8639-33efc75ee9d0";
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.initrd.luks.devices."luks-e9ef9c46-918e-43b9-9b99-b2979d5b7940".device = "/dev/disk/by-uuid/e9ef9c46-918e-43b9-9b99-b2979d5b7940";
+  networking.hostName = "nix-station";
+
+  # Enable Bluetooth
+  hardware.bluetooth.enable = true;
+
   # Flox Settings
-  nix.settings.trusted-substituters = [
-    "https://cache.flox.dev"
-    "https://nix-community.cachix.org"];
-  nix.settings.trusted-public-keys = [
-    "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
-    "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="];
+  nix.settings.trusted-substituters = ["https://cache.flox.dev"];
+  nix.settings.trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
 
 
   # Enable networking
   networking.networkmanager.enable = true;
-  networking.hostName = "nix-lemur";
+
 
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
@@ -45,9 +43,7 @@
     fsType = "nfs";
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
-
-  # Enable Bluetooth
-  hardware.bluetooth.enable = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   system.stateVersion = "25.05";
 }

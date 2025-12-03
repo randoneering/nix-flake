@@ -2,11 +2,11 @@
   description = "Randoneering Multi-System Flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs-update.url = "github:nix-community/nixpkgs-update";
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flox-nixpkgs.url = "github:flox/nixpkgs/stable";
     flox.url = "github:flox/flox";
@@ -23,6 +23,54 @@
     ...
   }: {
     nixosConfigurations = {
+      nix-station = let
+        username = "randoneering";
+        hostname = "nix-station";
+        specialArgs = {inherit username hostname;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86_64-linux";
+
+          modules = [
+            ./hosts/${hostname}/default.nix
+            ./users/${username}/nixos.nix
+            inputs.flox.nixosModules.flox
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.users.${username} = import ./users/${username}/home.nix;
+            }
+          ];
+        };
+
+      nix-L16 = let
+        username = "justin";
+        hostname = "nix-l16";
+        specialArgs = {
+          inherit username hostname;
+        };
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86-64_linux";
+          modules = [
+            ./hosts/L16/default.nix
+            ./users/${username}/nixos.nix
+            inputs.flox.nixosModules.flox
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.users.${username} = import ./users/${username}/home.nix;
+            }
+          ];
+        };
       nix-lemur = let
         username = "justin";
         hostname = "nix-lemur";
@@ -45,6 +93,34 @@
             }
           ];
         };
+      nix-wks = let
+        username = "justin";
+        hostname = "nix-wks";
+        specialArgs = {inherit username hostname;};
+      in
+        nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
+          system = "x86-64_linux";
+          modules = [
+            ./hosts/wks/default.nix
+            ./users/${username}/nixos.nix
+            inputs.flox.nixosModules.flox
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.users.${username} = import ./users/${username}/home.nix;
+            }
+          ];
+        };
+      db03 = nixpkgs.lib.nixosSystem {
+        system = "x86-64_linux";
+        modules = [
+          ./hosts/nix-db/configuration.nix
+        ];
+      };
     };
   };
 }
