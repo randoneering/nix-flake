@@ -4,10 +4,6 @@
   config,
   ...
 }: {
-  services.displayManager = {
-    sddm.enableHidpi = true;
-  };
-
   # xdg.portal = {
   #   enable = true;
   #   xdgOpenUSePortal = true;
@@ -54,21 +50,14 @@
   #       };
   #   };
 
-  services.xserver = {
-    enable = true;
-
-    desktopManager = {
+    services.desktopManager = {
       gnome.enable = true;
     };
 
-    displayManager = {
+    services.displayManager = {
       gdm.enable = true;
+      sddm.enableHidpi = true;
     };
-
-    # Configure keymap in X11
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
 
   # disable gnome packages
   environment.gnome.excludePackages = with pkgs.gnome; [

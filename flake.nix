@@ -115,12 +115,6 @@
             }
           ];
         };
-      db03 = nixpkgs.lib.nixosSystem {
-        system = "x86-64_linux";
-        modules = [
-          ./hosts/nix-db/configuration.nix
-        ];
-      };
     };
   };
 }

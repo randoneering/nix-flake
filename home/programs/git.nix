@@ -9,11 +9,11 @@
 
   programs.git = {
     enable = true;
-    userName = "${username}";
-    userEmail = "justin@randoneering.tech";
-    extraConfig = {
+    settings = {
       commit.gpgsign = true;
       gpg.format = "ssh";
+      user.name = "${username}";
+      user.email = "justin@randoneering.tech";
       user.signingkey = "~/.ssh/${hostname}.pub";
     };
   };
