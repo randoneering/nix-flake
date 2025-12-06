@@ -20,14 +20,14 @@
           "$git_branch$git_commit$git_state $git_status"
           "⋙  "];
         right_format = lib.concatStrings [
-        "$python"
-        "$rust"
-        "$terraform"
-        "$memory_usage"
-        "$aws"
-        "$custom"
-        "$status"
-        "$os"
+        "$python | "
+        "$rust | "
+        "$terraform | "
+        "$memory_usage | "
+        "$aws | "
+        "$custom | "
+        "$status | "
+        "$os | "
         "$time"];
         directory = {
             disabled = false;
