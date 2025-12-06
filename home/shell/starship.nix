@@ -28,7 +28,7 @@
         "$custom"
         "$status"
         "$os"
-        "| $time"];
+        " $time"];
         directory = {
             disabled = false;
             format = "[$path](bold fg:#458588)";
