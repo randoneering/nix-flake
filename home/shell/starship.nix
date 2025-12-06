@@ -50,7 +50,7 @@
         time_format = "%R";
         };
         python = {
-        format = "[$symbol]($virtualenv) $version]($style)";
+        format = "[$symbol]($virtualenv) [$version]($style)";
         style = "#fabd2f";
         symbol = "[ ](bold bright-blue)";
         version_format = "$raw";
