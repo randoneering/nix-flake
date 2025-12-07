@@ -54,20 +54,13 @@
   #       };
   #   };
 
-  services.xserver = {
-    enable = true;
+  services.desktopManager = {
+    gnome.enable = true;
+  };
 
-    desktopManager = {
-      gnome.enable = true;
-    };
-
-    displayManager = {
-      gdm.enable = true;
-    };
-
-    # Configure keymap in X11
-    xkb.layout = "us";
-    xkb.variant = "";
+  services.displayManager = {
+    gdm.enable = true;
+    sddm.enableHidpi = true;
   };
 
   # disable gnome packages
