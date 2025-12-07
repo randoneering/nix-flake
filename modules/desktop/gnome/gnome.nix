@@ -4,10 +4,6 @@
   config,
   ...
 }: {
-  services.displayManager = {
-    sddm.enableHidpi = true;
-  };
-
   # xdg.portal = {
   #   enable = true;
   #   xdgOpenUSePortal = true;
