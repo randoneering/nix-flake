@@ -30,6 +30,7 @@
     # productivity
     obsidian
     planify
+    atuin-desktop
 
     # IDE/Database Manager
     zed-editor
