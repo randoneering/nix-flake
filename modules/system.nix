@@ -19,6 +19,8 @@
     options = lib.mkDefault "--delete-older-than 7d";
   };
 
+  settings.auto-optimise-store = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   # Allow electron garbage
