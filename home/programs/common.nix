@@ -34,7 +34,6 @@
 
     # IDE/Database Manager
     zed-editor
-    dbeaver-bin
     mongosh
     postgresql
     mysql80
@@ -58,5 +57,7 @@
     protonvpn-gui
     protonmail-desktop
 
+    # Steam?
+    glibc
   ];
 }
