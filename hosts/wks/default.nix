@@ -43,7 +43,7 @@
   networking.hostName = "nix-wks";
   networking.networkmanager.enable = true;
   # Enable 32bit
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable32Bit = true;
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS
