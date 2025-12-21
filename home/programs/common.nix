@@ -39,6 +39,7 @@
     postgresql
     mysql80
     pgformatter
+    claude-code
 
     # IaC
     docker-compose

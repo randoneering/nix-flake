@@ -27,8 +27,7 @@
         "$aws"
         "$custom"
         "$status"
-        "$os"
-        " $time"];
+        "$os"];
         directory = {
             disabled = false;
             format = "[$path](bold fg:#458588)";
