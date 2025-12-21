@@ -4,6 +4,6 @@
   ...
 }: {
   imports = [
-    ./rclone.nix
+    ./rclone.
   ];
 }
