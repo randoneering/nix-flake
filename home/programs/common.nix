@@ -58,10 +58,5 @@
     protonvpn-gui
     protonmail-desktop
 
-    # steam
-    steam-original
-    steam-unwrapped
-    steam-run
-
   ];
 }
