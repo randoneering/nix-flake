@@ -2,7 +2,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Popping and Locking";
+      theme = "Popping & Locking";
       shell-integration-features = "sudo";
     };
     enableFishIntegration = true;
