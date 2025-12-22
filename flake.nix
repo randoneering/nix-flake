@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
-    unstable-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs-update.url = "github:nix-community/nixpkgs-update";
     home-manager.url = "github:nix-community/home-manager/release-25.11";
@@ -16,7 +16,7 @@
     self,
     nixpkgs,
     nixpkgs-update,
-    unstable-nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     flox,
     flox-nixpkgs,
@@ -26,6 +26,12 @@
       nix-station = let
         username = "randoneering";
         hostname = "nix-station";
+        overlay-unstable = final: prev: {
+          unstable = import nixpkgs-unstable {
+            system = prev.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        };
         specialArgs = {inherit username hostname;};
       in
         nixpkgs.lib.nixosSystem {
@@ -33,6 +39,7 @@
           system = "x86_64-linux";
 
           modules = [
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/${hostname}/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
@@ -50,6 +57,12 @@
       nix-L16 = let
         username = "justin";
         hostname = "nix-l16";
+        overlay-unstable = final: prev: {
+          unstable = import nixpkgs-unstable {
+            system = prev.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        };
         specialArgs = {
           inherit username hostname;
         };
@@ -58,6 +71,7 @@
           inherit specialArgs;
           system = "x86-64_linux";
           modules = [
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/L16/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
@@ -74,12 +88,19 @@
       nix-lemur = let
         username = "justin";
         hostname = "nix-lemur";
+        overlay-unstable = final: prev: {
+          unstable = import nixpkgs-unstable {
+            system = prev.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        };
         specialArgs = {inherit username hostname;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86-64_linux";
           modules = [
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/lemur/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
@@ -96,12 +117,19 @@
       nix-wks = let
         username = "justin";
         hostname = "nix-wks";
+        overlay-unstable = final: prev: {
+          unstable = import nixpkgs-unstable {
+            system = prev.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        };
         specialArgs = {inherit username hostname;};
       in
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86-64_linux";
           modules = [
+            ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/wks/default.nix
             ./users/${username}/nixos.nix
             inputs.flox.nixosModules.flox
@@ -115,12 +143,6 @@
             }
           ];
         };
-      db03 = nixpkgs.lib.nixosSystem {
-        system = "x86-64_linux";
-        modules = [
-          ./hosts/nix-db/configuration.nix
-        ];
-      };
     };
   };
 }
