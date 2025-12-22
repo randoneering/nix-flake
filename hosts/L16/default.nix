@@ -25,8 +25,14 @@
   networking.networkmanager.enable = true;
 
   # Steam
-  programs.steam.enable = true;
-
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
+  # Enable 32bit
+  hardware.graphics.enable32Bit = true;
   # Enable NFS
   boot.supportedFilesystems = ["nfs"];
   services.rpcbind.enable = true; # needed for NFS
