@@ -46,8 +46,9 @@
 
     # Configuration Management
     ansible
-    ##ansible-lint failing to build
 
+    # Steam
+    steam
     # Security
     syft
     grype
