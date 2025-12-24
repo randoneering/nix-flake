@@ -47,8 +47,6 @@
     # Configuration Management
     ansible
 
-    # Steam
-    steam
     # Security
     syft
     grype
