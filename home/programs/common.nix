@@ -19,6 +19,7 @@
     # rust
     cargo
     rustc
+    bun
 
     # python
     ruff
