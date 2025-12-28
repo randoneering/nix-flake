@@ -20,6 +20,8 @@
     cargo
     rustc
     bun
+    libgcc
+    cargo-tauri
 
     # python
     ruff
