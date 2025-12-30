@@ -3,6 +3,7 @@
   pkgs,
   lib,
   username,
+  nix-opcode,
   ...
 }: {
   imports = [
@@ -47,7 +48,9 @@
     options = ["x-systemd.automount" "noauto" "x-systemd.after=network-online.target" "x-systemd.mount-timeout=5s"];
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
+  environment.systemPackages = [
+    nix-opcode.packages.x86_64-linux.default  # Installs opcode binary
+  ];
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
   system.stateVersion = "25.05"; # Did you read the comment?

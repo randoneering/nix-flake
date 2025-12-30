@@ -10,6 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     flox-nixpkgs.url = "github:flox/nixpkgs/stable";
     flox.url = "github:flox/flox";
+    nix-opcode.url = "github:randoneering/nix-opcode"
   };
 
   outputs = inputs @ {
