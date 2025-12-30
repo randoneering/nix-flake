@@ -16,13 +16,6 @@
     freshfetch
     gimp3
 
-    # rust
-    cargo
-    rustc
-    bun
-    libgcc
-    cargo-tauri
-
     # python
     ruff
     uv
