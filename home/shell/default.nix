@@ -9,5 +9,6 @@
     ./fish.nix
     ./atuin.nix
     ./bash.nix
+    ./starship.nix
   ];
 }
