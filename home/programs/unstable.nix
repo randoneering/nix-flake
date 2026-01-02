@@ -11,7 +11,6 @@
       # productivity
       obsidian
       planify
-      atuin-desktop
       claude-code
       zed-editor
 
