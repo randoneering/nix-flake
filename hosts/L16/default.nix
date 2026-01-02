@@ -17,10 +17,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Flox Settings
-  nix.settings.trusted-substituters = ["https://cache.flox.dev"];
-  nix.settings.trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
-
   boot.initrd.luks.devices."luks-6c7efb18-8b6a-4e45-ae5f-f5f35162f86b".device = "/dev/disk/by-uuid/6c7efb18-8b6a-4e45-ae5f-f5f35162f86b";
   networking.hostName = "nix-l16";
   networking.networkmanager.enable = true;

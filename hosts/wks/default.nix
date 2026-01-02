@@ -28,10 +28,6 @@
   boot.initrd.luks.devices."luks-38a8795e-d976-4853-96c2-30836c1c1106".keyFile = "/boot/crypto_keyfile.bin";
   boot.initrd.luks.devices."luks-25ac66f8-28c2-4b24-9f65-2aa0a8f0ad2c".keyFile = "/boot/crypto_keyfile.bin";
 
-  # Flox Settings
-  nix.settings.trusted-substituters = ["https://cache.flox.dev"];
-  nix.settings.trusted-public-keys = ["flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="];
-
   # Steam
   programs.steam = {
     enable = true;

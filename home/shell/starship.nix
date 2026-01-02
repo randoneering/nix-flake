@@ -6,6 +6,7 @@
   programs = {
     starship = {
       enable = true;
+      package = pkgs.unstable.starship;
       enableBashIntegration = config.programs.bash.enable;
       enableFishIntegration = config.programs.fish.enable;
       enableZshIntegration = config.programs.zsh.enable;

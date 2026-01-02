@@ -11,10 +11,6 @@
     nfs-utils
     git
     wget
-    popsicle
-    dconf
-    freshfetch
-    gimp3
 
     # python
     ruff
@@ -23,18 +19,11 @@
     # nix dev
     niv
 
-    # productivity
-    obsidian
-    planify
-    atuin-desktop
-
     # IDE/Database Manager
-    zed-editor
     mongosh
     postgresql
     mysql80
     pgformatter
-    claude-code
 
     # IaC
     docker-compose
@@ -42,15 +31,6 @@
 
     # Configuration Management
     ansible
-
-    # Security
-    syft
-    grype
-    proton-pass
-    proton-authenticator
-    bitwarden-desktop
-    protonvpn-gui
-    protonmail-desktop
 
     # Steam?
     glibc

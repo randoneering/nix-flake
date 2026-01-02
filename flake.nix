@@ -6,10 +6,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs-update.url = "github:nix-community/nixpkgs-update";
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    flox-nixpkgs.url = "github:flox/nixpkgs/stable";
-    flox.url = "github:flox/flox";
   };
 
   outputs = inputs @ {
@@ -18,8 +16,6 @@
     nixpkgs-update,
     nixpkgs-unstable,
     home-manager,
-    flox,
-    flox-nixpkgs,
     ...
   }: {
     nixosConfigurations = {
@@ -37,12 +33,10 @@
         nixpkgs.lib.nixosSystem {
           inherit specialArgs;
           system = "x86_64-linux";
-
           modules = [
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/${hostname}/default.nix
             ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -74,7 +68,6 @@
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/L16/default.nix
             ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -103,7 +96,6 @@
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/lemur/default.nix
             ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
@@ -132,7 +124,6 @@
             ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay-unstable ]; })
             ./hosts/wks/default.nix
             ./users/${username}/nixos.nix
-            inputs.flox.nixosModules.flox
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
